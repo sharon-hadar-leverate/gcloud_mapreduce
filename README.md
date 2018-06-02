@@ -102,7 +102,7 @@ Clone and Configure MapRduce example:
 git clone https://github.com/sharon-hadar-leverate/gcloud_mapreduce.git
 cd gcloud_mapreduce/
 #mvn clean package -Dbigtable.projectID=YOUR_PROJECT_ID -Dbigtable.instanceID=YOUR_INSTANCE_ID
-mvn clean package -Dbigtable.projectID=		 -Dbigtable.instanceID=sharon-mapreduce-bigtable
+mvn clean package -Dbigtable.projectID=sharon-project-204821	 -Dbigtable.instanceID=sharon-mapreduce-bigtable
 ```
 
 
