@@ -1,4 +1,4 @@
-# run MapReduce Google Cloude in order to mine tweets 
+# Run MapReduce Google Cloude in order to mine tweets 
 
 Create Project enable billing and Google Cloud APIs
 
@@ -34,6 +34,11 @@ Create Project enable billing and Google Cloud APIs
 •	Zone: us-east1-b
 
 ### Open VM Instance SSH
+
+Sudo it:
+```
+sudo -s
+```
 
 Initialize Google Cloud
 ```
@@ -100,7 +105,21 @@ cd gcloud_mapreduce/
 mvn clean package -Dbigtable.projectID=		 -Dbigtable.instanceID=sharon-mapreduce-bigtable
 ```
 
-Now you can run 
+
+you need to pip3 install:
+```
+pip3 install numpy
+pip3 install pandas
+pip3 install bs4
+pip3 install tweepy
+pip3 install nltk
+pip3 install geopy
+```
+
+Now you can run find_top_words.py:
+```
+find_top_words.py -q "query to search" -n "location"
+```
 
 
 
