@@ -117,7 +117,7 @@ gcloud dataproc clusters create "sharon-mapreduce-bigtable" \
 	
 Run MapReduce word count BigTable DataProc (example)
 ```	
-	gcloud dataproc jobs submit hadoop --cluster sharon-mapreduce-bigtable \
+gcloud dataproc jobs submit hadoop --cluster sharon-mapreduce-bigtable \
     --jar target/wordcount-mapreduce-1.0-jar-with-dependencies.jar \
     -- wordcount-hbase \
     gs://lesv-big-public-data/books/book \
@@ -125,7 +125,7 @@ Run MapReduce word count BigTable DataProc (example)
     "words-count"
 ```
 ```
-	./cluster.sh start  sharon-mapreduce-bigtable 
+./cluster.sh start  sharon-mapreduce-bigtable 
 ```
 
 #### Run code
