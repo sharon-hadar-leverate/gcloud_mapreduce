@@ -105,7 +105,30 @@ cd gcloud_mapreduce/
 mvn clean package -Dbigtable.projectID=sharon-project-204821	 -Dbigtable.instanceID=sharon-mapreduce-bigtable
 ```
 
+Create Google Cloud DataProc cluster
+```	
+gcloud dataproc clusters create "sharon-mapreduce-bigtable" \
+    --bucket "sharon-bucket" \
+    --num-workers 2 \
+    --zone us-east1-c \
+    --master-machine-type n1-standard-2 \
+    --worker-machine-type n1-standard-2
+```
+	
+Run MapReduce word count BigTable DataProc (example)
+```	
+	gcloud dataproc jobs submit hadoop --cluster sharon-mapreduce-bigtable \
+    --jar target/wordcount-mapreduce-1.0-jar-with-dependencies.jar \
+    -- wordcount-hbase \
+    gs://lesv-big-public-data/books/book \
+    gs://lesv-big-public-data/books/b6130 \
+    "words-count"
+```
+```
+	./cluster.sh start  sharon-mapreduce-bigtable 
+```
 
+#### Run code
 you need to pip3 install:
 ```
 pip3 install numpy
