@@ -35,11 +35,6 @@ Create Project enable billing and Google Cloud APIs
 
 ### Open VM Instance SSH
 
-Sudo it:
-```
-sudo -s
-```
-
 Initialize Google Cloud
 ```
 gcloud init 
